@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Weather app</title>
+</head>
+<body>
+    <div id="container" class="container">
+        <header>
+            <i id="back" class='back bx bx-chevron-left'></i></box-icon>
+            <h4>Weather</h4>
+        </header>
+        <section id="form" class="form">
+            <div id="input-box" class="input-box">
+                <input id="city-input" class="city-input" type="text" placeholder="city" spellcheck="false" required>
+                <p id="msg" class="msg"></p>
+            </div>
+            <div class="separator"></div>
+            <button id="geolocation-btn" class="geolocation-btn">Get device geolocation</button>
+        </section>
+        <section class="weather-box">
+            <div class="main-info">
+                <div class="info">
+                    <p id="location" class="location"></p>
+                    <p id="country" class="country"></p>
+                    <span id="date" class="date"></span>
+                </div>
+                <div class="degrees-box">
+                    <p id="degrees" class="degrees"></p>
+                </div>
+                <div class="description-box">
+                    <img id="description-icon" class="description-icon" src="" alt="">
+                    <p id="description" class="description"></p>
+                </div>
+            </div>
+            <div class="details">
+                <div class="detail">
+                    <i class='bx bxs-thermometer'></i>
+                    <p>Feels like</p>
+                    <span id="feels-like"></span>
+                </div>
+                <div class="detail">
+                    <i class='bx bx-droplet'></i>
+                    <p>Humidity</p>
+                    <span id="humidity"></span>
+                </div>
+                <div class="detail">
+                    <i class='bx bx-wind'></i>
+                    <p>Wind</p>
+                    <span id="wind"></span>
+                </div>
+                <div class="detail">
+                    <i class='bx bx-radar'></i>
+                    <p>Pressure</p>
+                    <span id="pressure"></span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src='./apiKey.js'></script>
+    <script src="./main.js"></script>
+</body>
+</html>

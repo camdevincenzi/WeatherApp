@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container{
+    position: relative;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.712);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+header{
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.13);
+}
+h4{
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.774);
+    font-size: 17px;
+}
+i.back{
+    display: none;
+    color: rgba(255, 255, 255, 0.774);
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.container.active header i.back{
+    display: block;
+}
+.form{
+    display: flex;
+    justify-content: space-around;
+}
+.container.active .form{
+    display: none;
+}
+.city-input{
+    width: 300px;
+    padding: 7px 15px;
+    margin: 10px 15px;
+    outline: none;
+    border: 2px solid rgba(161, 161, 161, 0.479);
+    background-color: rgba(112, 112, 112, 0.308);
+    color: rgba(255, 255, 255, 0.479);
+    border-radius: 3px;
+    font-size: 17px;
+}
+.input-box{
+    width: 330px;
+}
+.msg{
+    width: 300px;
+    text-align: center;
+    margin-left: 15px;
+    padding: 7px 10px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    display: none;
+}
+.msg.searching{
+    display: block;
+    background-color: rgba(1, 90, 75, 0.349);
+    border: 2px solid rgb(1, 80, 73);
+    color:rgb(1, 80, 73);
+}
+.msg.error{
+    display: block;
+    background-color: rgba(163, 1, 1, 0.363);
+    border: 2px solid rgb(145, 0, 0);
+    color:rgb(202, 34, 34);
+}
+.geolocation-btn{
+    width: 300px;
+    height: 40px;
+    border-radius: 3px;
+    margin: 10px 15px;
+    background-color:rgba(63, 63, 63, 0.432);
+    border: 2px solid rgba(255, 255, 255, 0.288);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.geolocation-btn:hover{
+    background-color: rgba(255, 255, 255, 0.295);
+}
+.separator{
+    position: relative;
+    width: 100px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.13);
+    margin-top: 40px;
+}
+.separator::before{
+    content: 'or';
+    position: absolute;
+    color: rgba(255, 255, 255, 0.13);
+    top: -20px;
+    left: 40px;
+    z-index: 100;
+}
+.weather-box{
+    display: none;
+    flex-wrap: wrap;
+}
+.container.active .weather-box{
+    display: flex;
+}
+.main-info{
+    display: flex;
+}
+.description-icon{
+    width: 100px;
+}
+.info{
+    padding: 30px;
+    width: 260px;
+}
+.location{
+    color: rgba(255, 255, 255, 0.774);
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.location i {
+    margin-right: 5px;
+}
+.country{
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.774);
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.date{
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.295);
+}
+.weather-description{
+    color: rgba(255, 255, 255, 0.774);
+    margin-top: 10px;
+    font-size: 20px;
+}
+.degrees-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 200px;
+}
+.degrees{
+    font-size: 90px;
+    color: rgb(255, 255, 255);
+}
+.description-box{
+    background-color: rgba(0, 0, 0, 0.384);
+    padding: 25px;
+    margin-left: 30px;
+    text-align: center;
+    width: 290px;
+}
+.description{
+    color: rgba(255, 255, 255, 0.295);
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.774);
+    padding: 10px 70px;
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    border-top: 2px solid rgba(255, 255, 255, 0.13);
+}
+.detail i{
+    font-size: 25px;
+}
+.detail p{
+    color: rgba(255, 255, 255, 0.295);
+    margin: 8px 0;
+}
